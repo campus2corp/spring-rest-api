@@ -22,7 +22,7 @@ jobs:
     - name: Run unit test cases
       run: mvn test
     - name: Build the jar file
-      run: mvn jar:jar
+      run: mvn package
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
     - name: Set up Docker Buildx
