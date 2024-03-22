@@ -35,7 +35,10 @@ public class DynamoDBConfig {
                 .withRegion(Regions.AP_SOUTH_1)
                 .build();
         else
-            return AmazonDynamoDBClientBuilder.standard().build();
+            return AmazonDynamoDBClientBuilder.standard()
+                .withCredentials(amazonAWSCredentialsProvider())
+                .withRegion(Regions.AP_SOUTH_1)
+                .build();
     }
 
     /*@Bean
